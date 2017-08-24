@@ -1,0 +1,101 @@
+<body background-image="src/images/Login-Page-Background.jpg" xmlns:text-transform="http://www.w3.org/1999/xhtml">
+
+<h1>
+  <marquee>Employee Leave Managment Tool!!</marquee>
+</h1>
+<div class="register-page">
+  <div class="form">
+    <h2 style="font-weight: bold;text-align: center">Register </h2>
+    <form class="register-form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)" novalidate>
+
+
+      <input type="text" #empId="ngModel" maxlength="5" style="text-transform: uppercase"
+             required placeholder="empid" name="empid" ngModel/>
+      <div *ngIf="empId.errors && (empId.dirty || empId.touched)" class="alert alert-danger">
+        <div [hidden]="!empId.errors.required">
+          empid is required
+        </div>
+      </div>
+
+      <input type="email" #emailRef="ngModel" maxlength="30" minlength="5" required placeholder="Email" name="email"
+             ngModel/>
+      <div *ngIf="emailRef.errors && (emailRef.dirty || emailRef.touched)" class="alert alert-danger">
+        <div [hidden]="!emailRef.errors.required">
+          email is required
+        </div>
+        <div [hidden]="!emailRef.errors.minlength">
+          Please enter atleast 5 characters
+        </div>
+      </div>
+
+
+      <input type="password" #passwdRef="ngModel" maxlength="15" minlength="5" required placeholder="Password"
+             name="password" ngModel/>
+      <div *ngIf="passwdRef.errors && (passwdRef.dirty || passwdRef.touched)" class="alert alert-danger">
+        <div [hidden]="!passwdRef.errors.required">
+          Password is required
+        </div>
+        <div [hidden]="!passwdRef.errors.minlength">
+          Please enter atleast 5 characters
+        </div>
+      </div>
+
+
+      <input type="text" #Firstname="ngModel" maxlength="15" minlength="3" required placeholder="First Name"
+             name="fName" ngModel/>
+      <div *ngIf="Firstname.errors && (Firstname.dirty || Firstname.touched)" class="alert alert-danger">
+        <div [hidden]="!Firstname.errors.required">
+          First Name is required
+        </div>
+        <div [hidden]="!Firstname.errors.minlength">
+          Please enter atleast 3 characters
+        </div>
+      </div>
+
+
+      <input type="text" #Lastname="ngModel" maxlength="15" minlength="4" required placeholder="Last Name" name="lName"
+             ngModel/>
+      <div *ngIf="Lastname.errors && (Lastname.dirty || Lastname.touched)" class="alert alert-danger">
+        <div [hidden]="!Lastname.errors.required">
+          Lastname is required
+        </div>
+        <div [hidden]="!Lastname.errors.minlength">
+          Please enter atleast 4 characters
+        </div>
+      </div>
+
+
+      <label><b>Gender</b>
+        <input type="radio" [(ngModel)]="gender.type" name="type" value="M">Male
+        <input type="radio" [(ngModel)]="gender.type" name="type" value="F">Female
+      </label>
+
+
+      <input type="text" #ContactRef="ngModel" maxlength="12" minlength="10" pattern="[0-9]*" required
+             placeholder="Contact Number" name="contactNo" ngModel/>
+      <div *ngIf="ContactRef.errors && (ContactRef.dirty || ContactRef.touched)" class="alert alert-danger">
+        <div [hidden]="!ContactRef.errors.required">
+          Please provide contact details
+        </div>
+        <div [hidden]="!ContactRef.errors.minlength">
+          Please enter 10 Digits
+        </div>
+        <div [hidden]="!ContactRef.hasError('pattern')">
+          Phone number should be only numbers
+        </div>
+      </div>
+
+
+      <button [disabled]="!userForm.form.valid" type="submit">Register</button>
+
+      <h2>
+        <button (click)="onClickLogin()"> login here</button>
+      </h2>
+    </form>
+
+
+  </div>
+
+</div>
+</body>
+<router-outlet></router-outlet>

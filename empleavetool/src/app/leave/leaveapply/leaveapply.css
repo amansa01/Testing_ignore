@@ -1,0 +1,59 @@
+body
+{
+  background-color: #94b794;
+
+}
+.bkgrnd {
+  background-image: url('./images/abstract-background-design (1).jpg');
+}
+
+div.one{
+
+  background-image: url('./images/a3819e347a317ffdcefadf9c24452fb1 - Copy.png');
+  background-repeat: no-repeat;
+  text-align-last: center;
+
+  height: 150px;
+  text-align-last: center;
+
+  padding-top: 20px;
+
+
+}
+
+li:nth-child(odd){
+  background-color: #ffbb7c;
+  text-align: left;
+}
+li:nth-child(even){
+  background-color: yellow;
+  text-align: left;
+}
+
+div.five{
+
+  margin-top: 3px;
+  text-align: center;
+  height: 50px;
+
+}
+div.four{
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  height: 500px;
+  width: 50%;
+  text-align: center;
+}
+
+
+div.two
+{
+
+  height: 500px;
+  width: 25%;
+  text-align: center;
+}
+
+

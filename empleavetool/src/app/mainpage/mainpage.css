@@ -1,0 +1,92 @@
+.bkgrnd {
+  background-image: url('./images/abstract-background-design (1).jpg');
+}
+
+h3.header-down {
+
+  margin-top: 45px;
+  text-align: center;
+  font-style: inherit;
+  font-family: "Berlin Sans FB Demi";
+  font-size: 2.6em;
+  color: red;
+
+}
+
+div.one{
+
+  background-image: url('./images/a3819e347a317ffdcefadf9c24452fb1 - Copy.png');
+  background-repeat: no-repeat;
+  text-align-last: center;
+  margin-bottom:3px;
+  height: 100px;
+
+}
+
+div.five{
+
+  margin-top: 3px;
+  text-align: center;
+  height: 50px;
+
+}
+div.four{
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  height: 500px;
+  width: auto;
+  text-align: center;
+}
+
+
+div.two
+{
+
+  height: 500px;
+  width: 25%;
+  text-align: left;
+}
+
+li:nth-child(odd){
+  background-color: #ffbb7c;
+  text-align: left;
+}
+li:nth-child(even){
+  background-color: yellow;
+  text-align: left;
+}
+
+ul{list-style-type: none;}
+
+
+
+table, th, td {
+  padding:.75rem;
+  margin-bottom:1rem;
+  margin-top:2rem;
+  padding-left:5px;
+  background-color:#fff;
+  border-top:1px solid #eceeef;
+  border-bottom:2px solid #eceeef;
+}
+.form-group{
+  border-color: #5fcf80;
+}
+
+
+.details{
+font-family: "Berlin Sans FB Demi";
+  text-align: left;
+  table-layout: auto;
+  color: #02af19;
+ }
+.can{
+  margin: auto;
+
+}
+.details #user{
+  color: #2664ff;
+  text-align: center;
+}

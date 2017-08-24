@@ -1,0 +1,80 @@
+<title xmlns:float="http://www.w3.org/1999/xhtml"></title>
+<body class="bkgrnd">
+<link rel="stylesheet" href="leavehistory.css">
+<div class="one">
+
+</div>
+
+<div>
+  <h3 class="header-down">Employee Leave Management Tool </h3>
+</div>
+
+<div class="two" style="float:left"><br>
+  <h3>Contents</h3>
+  <ul>
+    <br>
+    <li>
+      <h4 (click)="onMainPage()"><b>Main Page</b></h4>
+    </li>
+    <br>
+    <br>
+    <li>
+      <h4 (click)="onClickApplyLeave()"><b>Apply for a Leave</b></h4>
+    </li>
+    <br>
+    <li>
+      <h4 (click)="onClickHistory()"><b>LeaveHistory</b></h4>
+    </li>
+    <br>
+    <li>
+      <h4 (click)="onClickCancel()"><b>CancelHistory</b></h4>
+    </li>
+  </ul>
+
+
+</div>
+
+
+<div class="four">
+  <button type="submit" (click)="save()">Show History</button>
+
+  <button class="btn" (click)="onClickLogout() " style=position:absolute;right:0px;top:225px> Log out</button>
+  <table class="can">
+    <tr>
+      <th>Sno</th>
+      <th>empId</th>
+      <th>fromDate</th>
+      <th>leaveId</th>
+      <th>leaveStatus</th>
+      <th>leaveTag</th>
+      <th>noDays</th>
+      <th>reason</th>
+      <th>toDate</th>
+
+    </tr>
+
+    <tr *ngFor="let item of items;let i=index">
+
+
+      <td>{{i+1}}</td>
+      <td>{{item.empId}}</td>
+      <td>{{item.fromDate}}</td>
+      <td>{{item.leaveId}}</td>
+
+      <td>{{item.leaveStatus}}</td>
+
+      <td>{{item.leaveTag}}</td>
+      <td>{{item.noDays}}</td>
+      <td>{{item.reason}}</td>
+      <td>{{item.toDate}}</td>
+
+    </tr>
+
+
+  </table>
+</div>
+
+
+<div class="five"><h2>Created By Aman Saini</h2></div>
+</body>
+<router-outlet></router-outlet>

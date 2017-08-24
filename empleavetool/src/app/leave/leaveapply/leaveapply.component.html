@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="leaveapply.css">
+<body class="bkgrnd">
+<div class="one"><h3 style="padding-top: 80px;">Employee Leave Management Tool </h3>
+
+  <button (click)="onClickLogout()"> Log out</button>
+
+</div>
+
+
+<div class="two" style="float:left"><h3>Contents</h3>
+  <ul>
+
+    <br>
+    <li>
+      <h4 (click)="onClickApplyLeave()"><b>Apply for a Leave</b></h4>
+    </li>
+    <br>
+    <li>
+      <h4 (click)="onClickHistory()"><b>LeaveHistory</b></h4>
+    </li>
+    <br>
+    <li>
+      <h4 (click)="onClickCancel()"><b>CancelHistory</b></h4>
+    </li>
+  </ul>
+
+
+</div>
+
+
+<div class="four" style="padding-top: 40px">
+  <form [formGroup]="myForm" novalidate (ngSubmit)="save(myForm.value)">
+
+    <div class="form-group"> <b>Date From</b>
+      <input type="date" class="form-control" name="applyDate" formControlName="fromDate" required placeholder="Date">
+
+    </div>
+
+    <div><b> Reason For Leave</b>
+      <input type="text" class="form-control" required placeholder="Reason" formControlName="reason">
+    </div>
+
+    <br>    <div> <b>No of Days Leave required for</b>
+      <input type="number" class="form-control" required placeholder="No Of days" formControlName="noDays">
+    </div>
+
+
+    <br> <b>Leave Tag</b>
+    <br>
+    <select formControlName="leaveTag" >Leave Tag
+      <option *ngFor="let tag of leavetag" value={{tag.name}}>{{tag.name}}</option>
+    </select>
+<br><br>
+    <div><b>Leave Till date</b>
+      <input type="date" class="form-control" required placeholder="Leave Till" formControlName="toDate">
+    </div>
+
+    <button [disabled]="!myForm.valid" type="submit">Submit</button>
+  </form>
+
+</div>
+
+
+<div class="five"><h2>Created By Aman Saini</h2></div>
+</body>
+<router-outlet></router-outlet>

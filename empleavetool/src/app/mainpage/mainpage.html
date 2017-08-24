@@ -1,0 +1,74 @@
+<title xmlns:float="http://www.w3.org/1999/xhtml">Weekly Assignment </title>
+<body class="bkgrnd">
+<link rel="stylesheet" href="mainpage.css">
+<div class="one">
+
+</div>
+
+<div>
+  <h3 class="header-down">Employee Leave Management Tool </h3>
+</div>
+
+<div class="two" style="float:left"><br>
+  <h3>Contents</h3>
+  <ul>
+    <br>
+    <li>
+      <h4 (click)="onMainPage()"><b>Main Page</b></h4>
+    </li>
+    <br>
+    <br>
+    <li>
+      <h4 (click)="onClickApplyLeave()"><b>Apply for a Leave</b></h4>
+    </li>
+    <br>
+    <li>
+      <h4 (click)="onClickHistory()"><b>LeaveHistory</b></h4>
+    </li>
+    <br>
+    <li>
+      <h4 (click)="onClickCancel()"><b>CancelHistory</b></h4>
+    </li>
+  </ul>
+
+
+</div>
+<div class="four">
+  <h3><b>Employee details</b></h3>
+
+  <div class="details" *ngIf="userDetails">
+    <table class="can">
+      <tr>
+        <th><h3><b>Employee ID</b></h3></th>
+        <td><h3 id="user"><b> {{userDetails.empId}} </b></h3></td>
+      </tr>
+      <tr>
+        <th><h3><b>Employee Name</b></h3></th>
+        <td><h3 id="user"><b> {{userDetails.fName}} {{userDetails.lName}}</b></h3></td>
+      </tr>
+      <tr>
+        <th><h3><b> Contact No </b></h3></th>
+        <td><h3 id="user"><b> {{userDetails.contactNo}}</b></h3></td>
+      </tr>
+
+      <tr>
+        <th><h3><b>Email </b></h3></th>
+        <td><h3 id="user"><b> {{userDetails.email}}</b></h3></td>
+      </tr>
+
+      <tr>
+        <th><h3><b>Leave Balance </b></h3></th>
+        <td><h3 id="user"><b>{{userDetails.leaveBalance}} </b></h3></td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="btn" (click)="onClickLogout() " style=position:absolute;right:0px;top:225px> Log out</button>
+
+</div>
+
+
+<div class="five"><h2>Created By Aman Saini</h2></div>
+</body>
+<router-outlet></router-outlet>

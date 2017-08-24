@@ -1,0 +1,36 @@
+
+<body class="bkgrnd">
+
+<h1 style="color:#177d4d; font-family:sans-serif; font-weight:bold; text-align:center; marquee-style: alternate }"><marquee>Employee Leave Managment Tool!!</marquee></h1>
+<div class="login-page">
+  <div class="form">
+    <h2 style="font-weight: bold;">Login</h2>
+    <form class="login-form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)" novalidate>
+
+      <input type="text" #nameRef="ngModel" maxlength="30" minlength="5" required placeholder="Email" name="email" ngModel/>
+      <div *ngIf="nameRef.errors && (nameRef.dirty || nameRef.touched)" class="alert alert-danger">
+        <div [hidden]="!nameRef.errors.required">
+          Email is required
+        </div>
+        <div [hidden]="!nameRef.errors.minlength">
+          Please enter atleast 5 characters
+        </div>
+      </div>
+      <input type="password" #passwdRef="ngModel" maxlength="10" minlength="5" required placeholder="Password" name="password" ngModel/>
+      <div *ngIf="passwdRef.errors && (passwdRef.dirty || passwdRef.touched)" class="alert alert-danger">
+        <div [hidden]="!passwdRef.errors.required">
+          Password is required
+        </div>
+        <div [hidden]="!passwdRef.errors.minlength">
+          Please enter atleast 5 characters
+        </div>
+      </div>
+
+      <button [disabled]="!userForm.form.valid" type="submit">login</button>
+      <p class="message">Not registered? <a routerLink="/register" routerLinkActive="active">Create an account</a></p>
+    </form>
+  </div>
+</div>
+</body>
+
+<router-outlet></router-outlet>
