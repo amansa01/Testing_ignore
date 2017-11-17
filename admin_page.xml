@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/createVendor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="92dp"
+        android:text="@string/createVendors" />
+
+    <Button
+        android:id="@+id/vendorDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/createVendor"
+        android:layout_alignStart="@+id/createVendor"
+        android:layout_below="@+id/createVendor"
+        android:layout_marginTop="50dp"
+        android:text="@string/vendorDetails" />
+
+    <Button
+        android:id="@+id/invoiceList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/vendorDetail"
+        android:layout_alignStart="@+id/vendorDetail"
+        android:layout_below="@+id/vendorDetail"
+        android:layout_marginTop="55dp"
+        android:onClick="test"
+        android:text="@string/invoiceList" />
+
+    <Button
+        android:id="@+id/payVendor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/invoiceList"
+        android:layout_alignStart="@+id/invoiceList"
+        android:layout_below="@+id/invoiceList"
+        android:layout_marginTop="55dp"
+        android:text="@string/payToVendor" />
+</RelativeLayout>

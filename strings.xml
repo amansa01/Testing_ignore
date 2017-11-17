@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="createVendors">Create Vendor</string>
+    <string name="vendorDetails">Vendor Details</string>
+    <string name="invoiceList">Invoice List</string>
+    <string name="payToVendor">Pay vendor</string>
+</resources>
